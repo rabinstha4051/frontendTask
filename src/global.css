@@ -1,0 +1,143 @@
+*{
+    margin: 0px;
+}
+.login{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+}
+.loginForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    margin: 5px 0px;
+    width: 272px;
+    padding: 8px 8px 8px 4px;
+    border: 0.5px solid #ddd;
+}
+form .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form button{
+    background: #263a91;
+    outline: none;
+    border: none;
+    padding: 10px 14px;
+    color: #fff;
+    display: flex;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form p{
+    color: red;
+}
+.register{
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+}
+.register p{
+    cursor: pointer;
+    color: #263a91;
+    font-weight: 500;
+}
+.modalWrap{
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+    overflow-x: hidden;
+}
+.registerbtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.registerbtn input{
+    background: none;
+    outline: none;
+    border: none;
+    color: #263a91;
+    font-weight: 600;
+    position: absolute;
+    right: 0px;
+
+}
+.registerbtn span{
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    padding: 12px 4px 4px 4px;
+}
+.headWrap{
+    padding: 10px;
+    background-color: #eee;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.headWrap .logoHead{
+    display: flex;
+    justify-content: space-between;
+}
+.logoHead .err{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.headWrap .allbtn{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0px;
+}
+
+.allbtn .two_btn{
+    display: flex;
+    column-gap: 20px;
+    margin-top: 4px;
+}
+
+
+.two_btn .btngrp{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    text-align: center;
+    padding: 6px;
+    border-radius: 4px;
+}
+
+.search{
+    display: flex;
+    column-gap: 20px;
+}
+
+.search .searchBox{
+background-color: #fff;
+display: flex;
+align-items: center;
+padding-left: 30%;
+height: 32px;
+}
+
+.searchBox input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    overflow: hidden;
+}
+.tbl{
+    display: flex;
+    column-gap: 10%;
+}
