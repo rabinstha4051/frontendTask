@@ -3,19 +3,22 @@ import Modal from "react-modal";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 const schema = yup
   .object({
     username: yup.string().required("* username is required"),
     password: yup
       .string()
-      .required("* email is required")
+      .required("* password is required")
       .min(8, "* password should be atleast 8 digits"),
     email: yup.string().email("* email must be valid"),
   })
   .required();
 
 const RegisterModal = ({ setIsOpen, modalIsOpen }) => {
+  const navigate = useNavigate();
+
   function openModal() {
     setIsOpen(true);
   }
@@ -43,6 +46,8 @@ const RegisterModal = ({ setIsOpen, modalIsOpen }) => {
 
   const onSubmit = (data) => {
     console.log("dattu", data);
+    setIsOpen(false);
+    navigate("/home");
   };
 
   const {
@@ -83,11 +88,15 @@ const RegisterModal = ({ setIsOpen, modalIsOpen }) => {
                 placeholder="Email"
                 style={{ marginBottom: "20px" }}
               />
-              <p>{errors.password?.email}</p>
+              <p>{errors.emai?.messsage}</p>
 
               <div className="registerbtn">
-                <span onClick={() => setIsOpen(false)}>Cancle</span>
-                <input type="submit" value="Register Account" />
+                <span onClick={() => setIsOpen(false)}>Cancel</span>
+                <input
+                  type="submit"
+                  value="Register Account"
+                  style={{ width: "fit-content" }}
+                />
               </div>
             </form>
           </div>

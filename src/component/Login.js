@@ -11,7 +11,7 @@ const schema = yup
     username: yup.string().required("* username is required"),
     password: yup
       .string()
-      .required("* email is required")
+      .required("* password is required")
       .min(8, "* password should be atleast 8 digits"),
   })
   .required();
